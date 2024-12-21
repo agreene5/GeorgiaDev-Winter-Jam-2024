@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://blucxqxm0htc5"]
+[gd_scene load_steps=3 format=3 uid="uid://blucxqxm0htc5"]
 
 [ext_resource type="Texture2D" uid="uid://p2tlpjdhjwl0" path="res://Temp_Assets/caught4k.jpg" id="1_aig1g"]
+[ext_resource type="Script" path="res://Scenes/caught_screen.gd" id="2_4hb53"]
 
 [node name="Caught_Screen" type="Sprite2D"]
 position = Vector2(959, 544)
 scale = Vector2(3.872, 2.08365)
 texture = ExtResource("1_aig1g")
+script = ExtResource("2_4hb53")
