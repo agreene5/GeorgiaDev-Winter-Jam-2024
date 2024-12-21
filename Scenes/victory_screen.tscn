@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw4nb37a0h0mk"]
+
+[ext_resource type="Texture2D" uid="uid://3req0tl0mekg" path="res://Temp_Assets/Viccotry.jpg" id="1_acale"]
+[ext_resource type="Script" path="res://Scenes/victory_screen.gd" id="2_4rd7s"]
+
+[node name="Victory_Screen" type="Sprite2D"]
+position = Vector2(962, 543)
+scale = Vector2(3.21333, 2.725)
+texture = ExtResource("1_acale")
+script = ExtResource("2_4rd7s")

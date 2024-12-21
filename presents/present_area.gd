@@ -15,7 +15,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.name == "Grinch_Area":
 		Global_Variables.presents_collected += 1
 		if Global_Variables.presents_collected >= Global_Variables.all_presents:
-			print("You win!")
+			Global_Variables.you_win()
 		print(Global_Variables.presents_collected)
 		get_parent().queue_free()
 		
