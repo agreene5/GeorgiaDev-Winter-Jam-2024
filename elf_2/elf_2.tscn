@@ -1,21 +1,21 @@
 [gd_scene load_steps=8 format=3 uid="uid://c51w0b83assly"]
 
-[ext_resource type="Texture2D" uid="uid://ddiuni3yeic1l" path="res://Finished_Assets/Elf/Elf_1.png" id="1_0fqm5"]
+[ext_resource type="Texture2D" uid="uid://c8rofm06s2rwn" path="res://Finished_Assets/Elf_2/Elf2_1.png" id="1_vbq6h"]
+[ext_resource type="Texture2D" uid="uid://dqqjy63nutrx1" path="res://Finished_Assets/Elf_2/Elf2_2.png" id="2_m55hl"]
 [ext_resource type="Script" path="res://elf_2/elf_2_detector.gd" id="2_ue40n"]
-[ext_resource type="Texture2D" uid="uid://ck5nmy1s6y52h" path="res://Finished_Assets/Elf/Elf_2.png" id="2_x88gk"]
-[ext_resource type="Texture2D" uid="uid://dk3gc5402epye" path="res://Finished_Assets/Elf/Elf_3.png" id="3_7jn2h"]
+[ext_resource type="Texture2D" uid="uid://tydsw56je23q" path="res://Finished_Assets/Elf_2/Elf2_3.png" id="3_416rr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6f8ff"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_0fqm5")
+"texture": ExtResource("1_vbq6h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_x88gk")
+"texture": ExtResource("2_m55hl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_7jn2h")
+"texture": ExtResource("3_416rr")
 }],
 "loop": true,
 "name": &"default",
@@ -33,7 +33,6 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.227451, 1, 1, 1)
 scale = Vector2(-0.16, 0.16)
 sprite_frames = SubResource("SpriteFrames_6f8ff")
 autoplay = "default"
