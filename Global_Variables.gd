@@ -28,3 +28,6 @@ func got_caught():
 		
 		get_tree().change_scene_to_file("res://Scenes/caught_screen.tscn")
 		get_tree().paused = false # Unpausing the game
+
+var presents_collected = 0 # Dependent on how many presents you have
+var all_presents = 3 # Determines how many presents are needed to win
