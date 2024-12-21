@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c755at0enx5qr"]
+[gd_scene load_steps=11 format=3 uid="uid://c755at0enx5qr"]
 
 [ext_resource type="Texture2D" uid="uid://4004y76my86" path="res://icon.svg" id="1_4oeq1"]
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_v7tp3"]
 [ext_resource type="Script" path="res://Grinch/character_body_2d.gd" id="2_oypc1"]
 [ext_resource type="Script" path="res://Grinch/shape_shifting.gd" id="3_v4yhg"]
 [ext_resource type="PackedScene" uid="uid://djbi442whm3nh" path="res://elf_1/elf_1.tscn" id="4_x42fs"]
@@ -18,6 +19,7 @@ size = Vector2(51, 150)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-3, 387)
+script = ExtResource("1_v7tp3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(104, 560)

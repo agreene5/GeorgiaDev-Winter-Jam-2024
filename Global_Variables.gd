@@ -16,4 +16,15 @@ var caught = false
 func got_caught():
 	if caught == false:
 		caught = true
+		
+		get_tree().paused = true # Pausing the game for dramatic effect
+
+		var audio_player = AudioStreamPlayer.new()
+		audio_player.process_mode = Node.PROCESS_MODE_ALWAYS # Setting the process to ALWAYS so that it runs even when the game is paused
+		add_child(audio_player)
+		audio_player.stream = load("res://Temp_Assets/WilhelmScream.mp3")
+		audio_player.play()
+		await get_tree().create_timer(1.3).timeout # Waiting for scream to finish
+		
 		get_tree().change_scene_to_file("res://Scenes/caught_screen.tscn")
+		get_tree().paused = false # Unpausing the game

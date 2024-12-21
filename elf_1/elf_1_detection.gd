@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if grinch_visible == true:
 		if Global_Variables.current_form == 0:
+			
 			Global_Variables.got_caught()
 		else:
 			print("It's Santa!")
