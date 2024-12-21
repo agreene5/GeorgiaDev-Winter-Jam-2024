@@ -48,5 +48,9 @@ script = ExtResource("2_ue40n")
 position = Vector2(-167.5, -80)
 shape = SubResource("RectangleShape2D_lv3au")
 
+[node name="Polygon2D" type="Polygon2D" parent="Area2D"]
+color = Color(1, 0, 0, 0.431373)
+polygon = PackedVector2Array(-9, -28, -345, -221, -345, 63)
+
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
