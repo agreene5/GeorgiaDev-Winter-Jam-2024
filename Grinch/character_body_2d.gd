@@ -1,3 +1,5 @@
+# DELETE OR REPLACE WITH MOVEMENT SCRIPT
+
 extends CharacterBody2D
 
 
