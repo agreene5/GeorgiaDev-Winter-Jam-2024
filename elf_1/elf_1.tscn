@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://djbi442whm3nh"]
 
 [ext_resource type="Texture2D" uid="uid://bl3xev6wjiern" path="res://Temp_Assets/elf.jpg" id="1_cawr2"]
-[ext_resource type="Script" path="res://area_2d.gd" id="2_0b0g6"]
+[ext_resource type="Script" path="res://elf_1/elf_1_detection.gd" id="2_0b0g6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_454bl"]
 size = Vector2(69, 84)
@@ -10,6 +10,8 @@ size = Vector2(69, 84)
 size = Vector2(231, 213)
 
 [node name="Elf1" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.085)
