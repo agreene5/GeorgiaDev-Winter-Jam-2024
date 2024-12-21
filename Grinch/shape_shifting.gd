@@ -13,6 +13,6 @@ func _process(delta: float) -> void:
 			Global_Variables.current_form = 1
 			print("Santa Time")
 		else: # Turning into Grinch
-			%Grinch_Sprite.modulate = Color(1.0, 1.0, 1.0) # Turning sprite back to normal
+			%Grinch_Sprite.modulate = Color(0.0, 1.0, 0.0) # Turning sprite back to normal
 			Global_Variables.current_form = 0
 			print("Grinch Time")

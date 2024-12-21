@@ -35,4 +35,3 @@ func _on_area_exited(area: Area2D) -> void:
 func _on_current_form_changed(new_form: int) -> void:
 	is_santa = false
 	santa_timer = 5.0
-	print("Form changed to: ", new_form)
