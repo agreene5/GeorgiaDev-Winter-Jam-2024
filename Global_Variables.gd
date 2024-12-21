@@ -31,3 +31,5 @@ func got_caught():
 
 var presents_collected = 0 # Dependent on how many presents you have
 var all_presents = 3 # Determines how many presents are needed to win
+func you_win():
+	get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
