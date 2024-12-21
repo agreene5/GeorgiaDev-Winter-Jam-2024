@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c755at0enx5qr"]
+[gd_scene load_steps=8 format=3 uid="uid://c755at0enx5qr"]
 
 [ext_resource type="Texture2D" uid="uid://4004y76my86" path="res://icon.svg" id="1_x05ti"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="2_2jjj0"]
 [ext_resource type="PackedScene" uid="uid://djbi442whm3nh" path="res://elf_1.tscn" id="2_mhef3"]
+[ext_resource type="PackedScene" uid="uid://v04ydm6k6ns0" path="res://player.tscn" id="4_3pmqf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2t3w"]
 size = Vector2(4348, 143)
@@ -48,3 +49,5 @@ shape = SubResource("RectangleShape2D_dnjla")
 
 [node name="Elf1" parent="." instance=ExtResource("2_mhef3")]
 position = Vector2(497, 460)
+
+[node name="Player" parent="." instance=ExtResource("4_3pmqf")]
