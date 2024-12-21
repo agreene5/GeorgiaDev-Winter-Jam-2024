@@ -1,10 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://djbi442whm3nh"]
+[gd_scene load_steps=8 format=3 uid="uid://djbi442whm3nh"]
 
-[ext_resource type="Texture2D" uid="uid://bl3xev6wjiern" path="res://Temp_Assets/elf.jpg" id="1_cawr2"]
+[ext_resource type="Texture2D" uid="uid://ddiuni3yeic1l" path="res://Finished_Assets/Elf/Elf_1.png" id="1_abray"]
 [ext_resource type="Script" path="res://elf_1/elf_1_detection.gd" id="2_0b0g6"]
+[ext_resource type="Texture2D" uid="uid://ck5nmy1s6y52h" path="res://Finished_Assets/Elf/Elf_2.png" id="2_pugg6"]
+[ext_resource type="Texture2D" uid="uid://dk3gc5402epye" path="res://Finished_Assets/Elf/Elf_3.png" id="3_ifmth"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tqqi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_abray")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pugg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ifmth")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_454bl"]
-size = Vector2(69, 84)
+size = Vector2(29, 85)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eonky"]
 size = Vector2(231, 213)
@@ -13,12 +32,15 @@ size = Vector2(231, 213)
 collision_layer = 2
 collision_mask = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.085)
-texture = ExtResource("1_cawr2")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(-0.11, 0.11)
+sprite_frames = SubResource("SpriteFrames_5tqqi")
+autoplay = "default"
+frame = 1
+frame_progress = 0.848806
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-8.5, 1.5)
 shape = SubResource("RectangleShape2D_454bl")
 
 [node name="Area2D" type="Area2D" parent="."]
