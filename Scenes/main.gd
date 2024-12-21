@@ -16,7 +16,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 		time = timer.time_left
-		print(time)
 
 func _on_timer_timeout() -> void: # Called when timer hits 0
 		time = 0.0
