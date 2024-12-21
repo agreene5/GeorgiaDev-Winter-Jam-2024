@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://btpsawf4hwa8o"]
+
+[ext_resource type="Texture2D" uid="uid://ddiuni3yeic1l" path="res://Finished_Assets/Elf/Elf_1.png" id="1_tfp7s"]
+[ext_resource type="Texture2D" uid="uid://ck5nmy1s6y52h" path="res://Finished_Assets/Elf/Elf_2.png" id="2_sbafp"]
+[ext_resource type="Script" path="res://elf_3/elf_3_detector.gd" id="2_vvxsp"]
+[ext_resource type="Texture2D" uid="uid://dk3gc5402epye" path="res://Finished_Assets/Elf/Elf_3.png" id="3_3ci7g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vmvgc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tfp7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sbafp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3ci7g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0yty"]
+size = Vector2(58, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4tm4"]
+size = Vector2(448, 287)
+
+[node name="Elf3" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.901084, 0.670255, 3.85046e-07, 1)
+position = Vector2(12.1562, -15.625)
+scale = Vector2(-0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_vmvgc")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -13.5)
+shape = SubResource("RectangleShape2D_i0yty")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_vvxsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-214, -78.5)
+shape = SubResource("RectangleShape2D_l4tm4")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
