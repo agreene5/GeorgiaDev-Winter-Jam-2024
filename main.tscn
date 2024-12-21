@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=10 format=3 uid="uid://c755at0enx5qr"]
 
 [ext_resource type="Texture2D" uid="uid://4004y76my86" path="res://icon.svg" id="1_x05ti"]
@@ -6,6 +7,7 @@
 [ext_resource type="Script" path="res://Grinch/shape_shifting.gd" id="3_6fk38"]
 [ext_resource type="PackedScene" uid="uid://c51w0b83assly" path="res://elf_2/elf_2.tscn" id="5_nrwbt"]
 [ext_resource type="PackedScene" uid="uid://btpsawf4hwa8o" path="res://elf_3.tscn" id="6_573ne"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2t3w"]
 size = Vector2(4348, 143)
@@ -61,8 +63,10 @@ shape = SubResource("RectangleShape2D_dnjla")
 [node name="Elf1" parent="." instance=ExtResource("2_mhef3")]
 position = Vector2(497, 460)
 
+
 [node name="Elf2" parent="." instance=ExtResource("5_nrwbt")]
 position = Vector2(1150, 441)
 
 [node name="Elf3" parent="." instance=ExtResource("6_573ne")]
 position = Vector2(1887, 440)
+
