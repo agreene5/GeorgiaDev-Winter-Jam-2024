@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c755at0enx5qr"]
+[gd_scene load_steps=18 format=3 uid="uid://c755at0enx5qr"]
 
 [ext_resource type="Texture2D" uid="uid://4004y76my86" path="res://icon.svg" id="1_4oeq1"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_v7tp3"]
@@ -13,6 +13,7 @@
 [ext_resource type="FontFile" uid="uid://c0bdp5ffbpdu8" path="res://Finished_Assets/Non-Housemade Assets/PixelatedEleganceRegular-ovyAA.ttf" id="9_6aaf0"]
 [ext_resource type="Script" path="res://UI_Elements/presents_ui.gd" id="9_21bb7"]
 [ext_resource type="Script" path="res://Scenes/timer_ui.gd" id="11_4x2gd"]
+[ext_resource type="AudioStream" uid="uid://5c3qhe2yv3ts" path="res://Finished_Assets/Music/grinch draft 1 2024-12-21 0104.mp3" id="14_a1bgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2t3w"]
 size = Vector2(10196, 143)
@@ -114,3 +115,7 @@ text = "1:00 PM"
 script = ExtResource("11_4x2gd")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Music_Theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_a1bgn")
+autoplay = true
