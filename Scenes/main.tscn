@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c755at0enx5qr"]
+[gd_scene load_steps=15 format=3 uid="uid://c755at0enx5qr"]
 
 [ext_resource type="Texture2D" uid="uid://4004y76my86" path="res://icon.svg" id="1_4oeq1"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_v7tp3"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c51w0b83assly" path="res://elf_2/elf_2.tscn" id="5_ep68p"]
 [ext_resource type="PackedScene" uid="uid://btpsawf4hwa8o" path="res://elf_3/elf_3.tscn" id="6_hsds3"]
 [ext_resource type="PackedScene" uid="uid://dah40pha23gbf" path="res://presents/present.tscn" id="8_h1cf3"]
+[ext_resource type="FontFile" uid="uid://c0bdp5ffbpdu8" path="res://Finished_Assets/Non-Housemade Assets/PixelatedEleganceRegular-ovyAA.ttf" id="9_6aaf0"]
+[ext_resource type="Script" path="res://UI_Elements/presents_ui.gd" id="9_21bb7"]
+[ext_resource type="Script" path="res://Scenes/timer_ui.gd" id="11_4x2gd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2t3w"]
 size = Vector2(10196, 143)
@@ -79,3 +82,27 @@ scale = Vector2(0.11, 0.11)
 [node name="Present3" parent="." instance=ExtResource("8_h1cf3")]
 position = Vector2(2074, 387)
 scale = Vector2(0.11, 0.11)
+
+[node name="UI_Elements" type="CanvasLayer" parent="."]
+
+[node name="Presents_UI" type="Label" parent="UI_Elements"]
+offset_left = 366.0
+offset_top = 20.0
+offset_right = 915.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("9_6aaf0")
+theme_override_font_sizes/font_size = 60
+text = "Presents: ?/?"
+script = ExtResource("9_21bb7")
+
+[node name="Timer_UI" type="Label" parent="UI_Elements"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 280.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("9_6aaf0")
+theme_override_font_sizes/font_size = 60
+text = "1:00 PM"
+script = ExtResource("11_4x2gd")
+
+[node name="Timer" type="Timer" parent="."]
