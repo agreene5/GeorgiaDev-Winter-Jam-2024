@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://djbi442whm3nh" path="res://elf_1/elf_1.tscn" id="2_mhef3"]
 [ext_resource type="Script" path="res://Grinch/shape_shifting.gd" id="3_6fk38"]
 [ext_resource type="PackedScene" uid="uid://c51w0b83assly" path="res://elf_2/elf_2.tscn" id="5_nrwbt"]
-[ext_resource type="PackedScene" uid="uid://btpsawf4hwa8o" path="res://elf_3.tscn" id="6_573ne"]
+[ext_resource type="PackedScene" uid="uid://btpsawf4hwa8o" path="res://elf_3/elf_3.tscn" id="6_573ne"]
 
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2t3w"]
