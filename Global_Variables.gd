@@ -29,7 +29,16 @@ func got_caught():
 		get_tree().change_scene_to_file("res://Scenes/caught_screen.tscn")
 		get_tree().paused = false # Unpausing the game
 
-var presents_collected = 0 # Dependent on how many presents you have
+signal presents_value_changed(num_presents)
+var _presents_collected = 0 # Dependent on how many presents you have
+var presents_collected: int: # Signals whenever presents_collected changes value
+	get:
+		return _presents_collected
+	set(value):
+		if _presents_collected != value:
+			_presents_collected = value
+			presents_value_changed.emit(value)
+
 var all_presents = 3 # Determines how many presents are needed to win
 func you_win():
 	get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
