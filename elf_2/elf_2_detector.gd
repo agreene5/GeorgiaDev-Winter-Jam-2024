@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if grinch_visible:
 		if Global_Variables.current_form == 0:
-				print("Grinch Detected!")
+				Global_Variables.got_caught()
 		else:
 			if is_santa:
 				print("It's Santa!")
@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 			
 			santa_timer -= delta
 			if santa_timer <= 0:
-				print("That's not santa!")
+				Global_Variables.got_caught()
 				is_santa = false
 
 func _on_area_entered(area: Area2D) -> void:

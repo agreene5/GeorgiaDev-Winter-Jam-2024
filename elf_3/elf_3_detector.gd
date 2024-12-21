@@ -13,8 +13,7 @@ func _process(delta: float) -> void:
 		if Global_Variables.current_form == 0:
 			print("AAAAAH I'm TERRIFIED!!!")
 		else:
-			print("That is an imposter, not Santa!")
-
+			Global_Variables.got_caught()
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.name == "Grinch_Area":
