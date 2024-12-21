@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dah40pha23gbf"]
+
+[ext_resource type="Texture2D" uid="uid://c73siuowd7vxa" path="res://Temp_Assets/Present.png" id="1_algpw"]
+[ext_resource type="Script" path="res://presents/present_area.gd" id="2_ht8h1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qlakv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_algpw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqay5"]
+size = Vector2(752.381, 800)
+
+[node name="Present" type="AnimatedSprite2D"]
+position = Vector2(650, 395)
+scale = Vector2(0.105, 0.105)
+sprite_frames = SubResource("SpriteFrames_qlakv")
+
+[node name="Present_Area" type="Area2D" parent="."]
+script = ExtResource("2_ht8h1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Present_Area"]
+position = Vector2(4.76074, 0)
+shape = SubResource("RectangleShape2D_nqay5")
+
+[connection signal="area_entered" from="Present_Area" to="Present_Area" method="_on_area_entered"]
