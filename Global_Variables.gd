@@ -42,3 +42,9 @@ var presents_collected: int: # Signals whenever presents_collected changes value
 var all_presents = 3 # Determines how many presents are needed to win
 func you_win():
 	get_tree().change_scene_to_file("res://Scenes/victory_screen.tscn")
+	
+var grinch_position: Vector2 # Set equal to the Grinch's position in real time
+
+var grinch_visible = false # Dependent on if elf_2 can see the grinch
+
+var is_santa = false # Dependent on if you're in santa form or not

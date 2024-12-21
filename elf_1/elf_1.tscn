@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://djbi442whm3nh"]
+[gd_scene load_steps=9 format=3 uid="uid://djbi442whm3nh"]
 
 [ext_resource type="Texture2D" uid="uid://ddiuni3yeic1l" path="res://Finished_Assets/Elf_1/Elf_1.png" id="1_abray"]
+[ext_resource type="Script" path="res://elf_1/elf_1+3.gd" id="1_ekfmn"]
 [ext_resource type="Script" path="res://elf_1/elf_1_detection.gd" id="2_0b0g6"]
 [ext_resource type="Texture2D" uid="uid://ck5nmy1s6y52h" path="res://Finished_Assets/Elf_1/Elf_2.png" id="2_pugg6"]
 [ext_resource type="Texture2D" uid="uid://dk3gc5402epye" path="res://Finished_Assets/Elf_1/Elf_3.png" id="3_ifmth"]
@@ -28,9 +29,10 @@ size = Vector2(29, 85)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eonky"]
 size = Vector2(231, 213)
 
-[node name="Elf1" type="CharacterBody2D"]
+[node name="Elf1" type="CharacterBody2D" groups=["Elves"]]
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("1_ekfmn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(-0.11, 0.11)
